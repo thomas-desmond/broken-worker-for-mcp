@@ -11,10 +11,9 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-import { x } from "./doesn-not-exist";
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		return new Response("Hello World");
+		return new Response(NeverDefinedVariable);
 	},
 } satisfies ExportedHandler<Env>;
